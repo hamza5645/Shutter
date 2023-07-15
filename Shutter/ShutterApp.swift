@@ -12,6 +12,7 @@ struct ShutterApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .transition(.scale)
         }
     }
 }
