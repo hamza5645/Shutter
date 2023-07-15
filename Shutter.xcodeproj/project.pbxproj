@@ -12,7 +12,7 @@
 		2FF1E5C22A62CBEC0042869F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FF1E5C12A62CBEC0042869F /* Assets.xcassets */; };
 		2FF1E5C52A62CBEC0042869F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FF1E5C42A62CBEC0042869F /* Preview Assets.xcassets */; };
 		2FF1E5D02A62D2E60042869F /* Lunch Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF1E5CF2A62D2E60042869F /* Lunch Screen.swift */; };
-		2FF1E5D22A62DAAF0042869F /* introOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF1E5D12A62DAAF0042869F /* introOne.swift */; };
+		2FF1E5D22A62DAAF0042869F /* welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF1E5D12A62DAAF0042869F /* welcome.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +22,7 @@
 		2FF1E5C12A62CBEC0042869F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2FF1E5C42A62CBEC0042869F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2FF1E5CF2A62D2E60042869F /* Lunch Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lunch Screen.swift"; sourceTree = "<group>"; };
-		2FF1E5D12A62DAAF0042869F /* introOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = introOne.swift; sourceTree = "<group>"; };
+		2FF1E5D12A62DAAF0042869F /* welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcome.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +58,7 @@
 				2FF1E5BD2A62CBE90042869F /* ShutterApp.swift */,
 				2FF1E5CF2A62D2E60042869F /* Lunch Screen.swift */,
 				2FF1E5BF2A62CBE90042869F /* ContentView.swift */,
-				2FF1E5D12A62DAAF0042869F /* introOne.swift */,
+				2FF1E5D12A62DAAF0042869F /* welcome.swift */,
 				2FF1E5C12A62CBEC0042869F /* Assets.xcassets */,
 				2FF1E5C32A62CBEC0042869F /* Preview Content */,
 			);
@@ -146,7 +146,7 @@
 				2FF1E5C02A62CBE90042869F /* ContentView.swift in Sources */,
 				2FF1E5BE2A62CBE90042869F /* ShutterApp.swift in Sources */,
 				2FF1E5D02A62D2E60042869F /* Lunch Screen.swift in Sources */,
-				2FF1E5D22A62DAAF0042869F /* introOne.swift in Sources */,
+				2FF1E5D22A62DAAF0042869F /* welcome.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

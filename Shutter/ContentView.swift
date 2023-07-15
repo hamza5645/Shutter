@@ -12,7 +12,7 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             if lunchScreen {
-                introOne()
+                welcome()
             } else {
                 Lunch_Screen()
             }
