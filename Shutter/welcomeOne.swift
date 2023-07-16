@@ -92,9 +92,14 @@ struct welcomeOne: View {
                         Spacer()
                     }
                 }
-                .fullScreenCover(isPresented: $isShowingAnotherView, content: {
-                    welcomeTwo()
-                })
+                .background(
+                    NavigationLink (
+                        destination: welcomeTwo()
+                            .navigationBarHidden(true),
+                        isActive: $isShowingAnotherView,
+                        label: { EmptyView() }
+                    )
+                )
             }
         }
     }
