@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F80817A2A63D13300484548 /* welcomeTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8081792A63D13300484548 /* welcomeTwo.swift */; };
 		2FF1E5BE2A62CBE90042869F /* ShutterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF1E5BD2A62CBE90042869F /* ShutterApp.swift */; };
 		2FF1E5C02A62CBE90042869F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF1E5BF2A62CBE90042869F /* ContentView.swift */; };
 		2FF1E5C22A62CBEC0042869F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FF1E5C12A62CBEC0042869F /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F8081792A63D13300484548 /* welcomeTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcomeTwo.swift; sourceTree = "<group>"; };
 		2FF1E5BA2A62CBE90042869F /* Shutter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shutter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FF1E5BD2A62CBE90042869F /* ShutterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShutterApp.swift; sourceTree = "<group>"; };
 		2FF1E5BF2A62CBE90042869F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				2FF1E5CF2A62D2E60042869F /* Lunch Screen.swift */,
 				2FF1E5BF2A62CBE90042869F /* ContentView.swift */,
 				2FF1E5D12A62DAAF0042869F /* welcomeOne.swift */,
+				2F8081792A63D13300484548 /* welcomeTwo.swift */,
 				2FF1E5C12A62CBEC0042869F /* Assets.xcassets */,
 				2FF1E5C32A62CBEC0042869F /* Preview Content */,
 			);
@@ -145,6 +148,7 @@
 			files = (
 				2FF1E5C02A62CBE90042869F /* ContentView.swift in Sources */,
 				2FF1E5BE2A62CBE90042869F /* ShutterApp.swift in Sources */,
+				2F80817A2A63D13300484548 /* welcomeTwo.swift in Sources */,
 				2FF1E5D02A62D2E60042869F /* Lunch Screen.swift in Sources */,
 				2FF1E5D22A62DAAF0042869F /* welcomeOne.swift in Sources */,
 			);
