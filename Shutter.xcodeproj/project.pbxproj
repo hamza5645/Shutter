@@ -10,6 +10,7 @@
 		2F80817A2A63D13300484548 /* welcomeTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8081792A63D13300484548 /* welcomeTwo.swift */; };
 		2F80817C2A64011A00484548 /* welcomeThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F80817B2A64011A00484548 /* welcomeThree.swift */; };
 		2F80817E2A64023000484548 /* Home page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F80817D2A64023000484548 /* Home page.swift */; };
+		2F8081842A64389500484548 /* Vollkorn-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F8081832A64387C00484548 /* Vollkorn-SemiBold.ttf */; };
 		2FF1E5BE2A62CBE90042869F /* ShutterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF1E5BD2A62CBE90042869F /* ShutterApp.swift */; };
 		2FF1E5C02A62CBE90042869F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF1E5BF2A62CBE90042869F /* ContentView.swift */; };
 		2FF1E5C22A62CBEC0042869F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FF1E5C12A62CBEC0042869F /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 		2F8081792A63D13300484548 /* welcomeTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcomeTwo.swift; sourceTree = "<group>"; };
 		2F80817B2A64011A00484548 /* welcomeThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcomeThree.swift; sourceTree = "<group>"; };
 		2F80817D2A64023000484548 /* Home page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home page.swift"; sourceTree = "<group>"; };
+		2F8081832A64387C00484548 /* Vollkorn-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vollkorn-SemiBold.ttf"; sourceTree = "<group>"; };
 		2FF1E5BA2A62CBE90042869F /* Shutter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shutter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FF1E5BD2A62CBE90042869F /* ShutterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShutterApp.swift; sourceTree = "<group>"; };
 		2FF1E5BF2A62CBE90042869F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		2FF1E5C32A62CBEC0042869F /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				2F8081832A64387C00484548 /* Vollkorn-SemiBold.ttf */,
 				2FF1E5C42A62CBEC0042869F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -148,6 +151,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F8081842A64389500484548 /* Vollkorn-SemiBold.ttf in Resources */,
 				2FF1E5C52A62CBEC0042869F /* Preview Assets.xcassets in Resources */,
 				2FF1E5C22A62CBEC0042869F /* Assets.xcassets in Resources */,
 			);
@@ -303,6 +307,7 @@
 				DEVELOPMENT_TEAM = 55L48W2DHK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Shutter/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -332,6 +337,7 @@
 				DEVELOPMENT_TEAM = 55L48W2DHK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Shutter/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

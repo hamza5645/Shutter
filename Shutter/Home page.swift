@@ -9,7 +9,19 @@ import SwiftUI
 
 struct Home_page: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack(alignment: .leading) {
+                HStack {
+                    Text("Photographers")
+                        .font(.custom("Vollkorn-SemiBold", size: 32))
+                        .padding(.horizontal)
+                        .fontWeight(.semibold)
+                    Spacer()
+                }
+                
+                Spacer()
+            }
+        }
     }
 }
 
