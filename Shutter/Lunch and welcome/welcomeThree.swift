@@ -10,6 +10,7 @@ import SwiftUI
 struct welcomeThree: View {
     @Environment(\.colorScheme) var colorScheme
     @State private var isShowingAnotherView = false
+    @State private var isShowingHome = false
     
     var body: some View {
         NavigationView {
@@ -17,7 +18,7 @@ struct welcomeThree: View {
                 HStack {
                     Spacer()
                     Button {
-                        //move to the main screen
+                        isShowingHome = true
                     } label: {
                         Text("Skip")
                             .font(.system(size: 14))
@@ -100,6 +101,15 @@ struct welcomeThree: View {
                         label: { EmptyView() }
                     )
                 )
+                .background(
+                    NavigationLink (
+                        destination: Home_page()
+                            .navigationBarHidden(true),
+                        isActive: $isShowingHome,
+                        label: { EmptyView() }
+                    )
+                )
+                
             }
         }
     }
