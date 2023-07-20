@@ -10,14 +10,38 @@ import SwiftUI
 struct Home_page: View {
     var body: some View {
         NavigationView {
-            VStack(alignment: .leading) {
+            VStack() {
                 HStack {
                     Text("Photographers")
                         .font(.custom("Vollkorn-SemiBold", size: 32))
-                        .padding(.horizontal)
+                        .padding(.horizontal, 30)
                         .fontWeight(.semibold)
                     Spacer()
                 }
+                
+                HStack {
+                    ZStack {
+                        Rectangle()
+                            .frame(width: 287, height: 40)
+                            .cornerRadius(4)
+                            .foregroundColor(.F_5_F_5_F_5)
+                        
+                        Text("Type name or #hashtag")
+                            .foregroundColor(.BBBBBB)
+                    }
+                    ZStack {
+                        Rectangle()
+                            .frame(width: 40, height: 40)
+                            .foregroundColor(.F_5_F_5_F_5)
+                            .cornerRadius(4)
+                        Image("filter")
+                    }
+                }
+                
+                Divider()
+                
+                Image("IMG4")
+                    .frame(width: 343, height: 220)
                 
                 Spacer()
             }
