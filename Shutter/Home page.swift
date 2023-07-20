@@ -46,16 +46,116 @@ struct Home_page: View {
                 
                 Divider()
                 
-                ZStack {
-                    Image("IMG4")
+                ScrollView {
+                    VStack {
+                        ZStack {
+                            Image("IMG4")
+                            
+                            VStack {
+                                Spacer()
+                                HStack {
+                                    Image("profile_pic")
+                                    Text("Mohamed Nady")
+                                        .font(.custom("Muli-Bold", size: 16))
+                                        .foregroundColor(.white)
+                                    Text("(4.5)")
+                                        .font(.custom("Muli", size: 16))
+                                        .foregroundColor(.yellow)
+                                    
+                                    Spacer()
+                                }
+                            }
+                            .padding()
+                        }
                         .frame(width: 343, height: 220)
-                    
-                    HStack {
-                        //profile elements here
+                        
+                        ZStack {
+                            Image("IMG5")
+                            
+                            VStack {
+                                Spacer()
+                                HStack {
+                                    Image("profile_pic")
+                                    Text("Mohamed Nady")
+                                        .font(.custom("Muli-Bold", size: 16))
+                                        .foregroundColor(.white)
+                                    Text("(4.5)")
+                                        .font(.custom("Muli", size: 16))
+                                        .foregroundColor(.yellow)
+                                    
+                                    Spacer()
+                                }
+                            }
+                            .padding()
+                        }
+                        .frame(width: 343, height: 220)
+                        
+                        ZStack {
+                            Image("IMG4")
+                            
+                            VStack {
+                                Spacer()
+                                HStack {
+                                    Image("profile_pic")
+                                    Text("Mohamed Nady")
+                                        .font(.custom("Muli-Bold", size: 16))
+                                        .foregroundColor(.white)
+                                    Text("(4.5)")
+                                        .font(.custom("Muli", size: 16))
+                                        .foregroundColor(.yellow)
+                                    
+                                    Spacer()
+                                }
+                            }
+                            .padding()
+                        }
+                        .frame(width: 343, height: 220)
+                        
+                        ZStack {
+                            Image("IMG5")
+                            
+                            VStack {
+                                Spacer()
+                                HStack {
+                                    Image("profile_pic")
+                                    Text("Mohamed Nady")
+                                        .font(.custom("Muli-Bold", size: 16))
+                                        .foregroundColor(.white)
+                                    Text("(4.5)")
+                                        .font(.custom("Muli", size: 16))
+                                        .foregroundColor(.yellow)
+                                    
+                                    Spacer()
+                                }
+                            }
+                            .padding()
+                        }
+                        .frame(width: 343, height: 220)
+                        
+                        ZStack {
+                            Image("IMG4")
+                            
+                            VStack {
+                                Spacer()
+                                HStack {
+                                    Image("profile_pic")
+                                    Text("Mohamed Nady")
+                                        .font(.custom("Muli-Bold", size: 16))
+                                        .foregroundColor(.white)
+                                    Text("(4.5)")
+                                        .font(.custom("Muli", size: 16))
+                                        .foregroundColor(.yellow)
+                                    
+                                    Spacer()
+                                }
+                            }
+                            .padding()
+                        }
+                        .frame(width: 343, height: 220)
+                        
+                        Spacer()
                     }
                 }
-                
-                Spacer()
             }
         }
     }
