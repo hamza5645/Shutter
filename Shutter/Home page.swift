@@ -26,9 +26,15 @@ struct Home_page: View {
                             .cornerRadius(4)
                             .foregroundColor(.F_5_F_5_F_5)
                         
-                        Text("Type name or #hashtag")
-                            .foregroundColor(.BBBBBB)
+                        HStack {
+                            Image("search")
+                                .padding(.vertical)
+                            Text("Type name or #hashtag")
+                                .foregroundColor(.BBBBBB)
+                        }
                     }
+                    
+                    
                     ZStack {
                         Rectangle()
                             .frame(width: 40, height: 40)
@@ -40,8 +46,14 @@ struct Home_page: View {
                 
                 Divider()
                 
-                Image("IMG4")
-                    .frame(width: 343, height: 220)
+                ZStack {
+                    Image("IMG4")
+                        .frame(width: 343, height: 220)
+                    
+                    HStack {
+                        //profile elements here
+                    }
+                }
                 
                 Spacer()
             }
