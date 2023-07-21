@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct Home_page: View {
+    @State private var sessionsView = false
+    @State private var profileView = false
+    
     var body: some View {
         NavigationView {
             VStack() {
@@ -157,6 +160,8 @@ struct Home_page: View {
                     }
                 }
                 
+                //nav bar
+                
                 ZStack {
                     Rectangle()
                         .frame(width: 375, height: 50)
@@ -165,6 +170,7 @@ struct Home_page: View {
                     
                     HStack {
                         Spacer()
+                        
                         VStack {
                             Image("home")
                                 .frame(width: 24, height: 24)
@@ -175,24 +181,50 @@ struct Home_page: View {
                         
                         Spacer()
                         
-                        VStack {
-                            Image("sessions")
-                                .frame(width: 24, height: 24)
-                            
-                            Text("Sessions")
-                                .font(.custom("Muli", size: 12))
+                        Button {
+                            sessionsView = true
+                        } label: {
+                            VStack {
+                                Image("sessions")
+                                    .frame(width: 24, height: 24)
+                                
+                                Text("Sessions")
+                                    .font(.custom("Muli", size: 12))
+                                    .foregroundColor(.black)
+                            }
                         }
+                        .background(
+                            NavigationLink(
+                                destination: sessions()
+                                    .navigationBarHidden(true),
+                                isActive: $sessionsView,
+                                label: { EmptyView() }
+                            )
+                        )
                         
                         Spacer()
                         
-                        VStack {
-                            Image("profile")
-                                .frame(width: 24, height: 24)
-                            
-                            Text("Profile")
-                                .font(.custom("Muli", size: 12))
-                            
-                            
+                        Button {
+                            profileView = true
+                        } label: {
+                            VStack {
+                                Image("profile")
+                                    .frame(width: 24, height: 24)
+                                
+                                Text("Profile")
+                                    .font(.custom("Muli", size: 12))
+                                    .foregroundColor(.black)
+                                
+                                
+                            }
+                            .background(
+                                NavigationLink(
+                                    destination: profile()
+                                        .navigationBarHidden(true),
+                                    isActive: $profileView,
+                                    label: { EmptyView() }
+                                )
+                            )
                         }
                         
                         Spacer()
