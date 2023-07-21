@@ -156,6 +156,20 @@ struct Home_page: View {
                         Spacer()
                     }
                 }
+                
+                ZStack {
+                    HStack {
+                        Rectangle()
+                            .frame(width: 375, height: 84)
+                            .foregroundColor(.white)
+                            .blur(radius: 20)
+                        
+                        Image("home")
+                            .frame()
+                        
+                        Spacer()
+                    }
+                }
             }
         }
     }
