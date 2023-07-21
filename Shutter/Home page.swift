@@ -165,7 +165,7 @@ struct Home_page: View {
                             .blur(radius: 20)
                         
                         Image("home")
-                            .frame()
+                            .frame(width: 24, height: 24)
                         
                         Spacer()
                     }
