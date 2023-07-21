@@ -158,14 +158,42 @@ struct Home_page: View {
                 }
                 
                 ZStack {
+                    Rectangle()
+                        .frame(width: 375, height: 50)
+                        .foregroundColor(.white)
+                        .blur(radius: 20)
+                    
                     HStack {
-                        Rectangle()
-                            .frame(width: 375, height: 84)
-                            .foregroundColor(.white)
-                            .blur(radius: 20)
+                        Spacer()
+                        VStack {
+                            Image("home")
+                                .frame(width: 24, height: 24)
+                            
+                            Text("Home")
+                                .font(.custom("Muli", size: 12))
+                        }
                         
-                        Image("home")
-                            .frame(width: 24, height: 24)
+                        Spacer()
+                        
+                        VStack {
+                            Image("sessions")
+                                .frame(width: 24, height: 24)
+                            
+                            Text("Sessions")
+                                .font(.custom("Muli", size: 12))
+                        }
+                        
+                        Spacer()
+                        
+                        VStack {
+                            Image("profile")
+                                .frame(width: 24, height: 24)
+                            
+                            Text("Profile")
+                                .font(.custom("Muli", size: 12))
+                            
+                            
+                        }
                         
                         Spacer()
                     }
