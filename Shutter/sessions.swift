@@ -13,6 +13,8 @@ struct sessions: View {
     }
 }
 
-#Preview {
-    sessions()
+struct sessions_Previews: PreviewProvider {
+    static var previews: some View {
+        sessions()
+    }
 }

@@ -27,13 +27,13 @@ struct Home_page: View {
                         Rectangle()
                             .frame(width: 287, height: 40)
                             .cornerRadius(4)
-                            .foregroundColor(.F_5_F_5_F_5)
+                            .foregroundColor(Color("F5F5F5"))
                         
                         HStack {
                             Image("search")
                                 .padding(.vertical)
                             Text("Type name or #hashtag")
-                                .foregroundColor(.BBBBBB)
+                                .foregroundColor(Color("BBBBBB"))
                         }
                     }
                     
@@ -41,7 +41,7 @@ struct Home_page: View {
                     ZStack {
                         Rectangle()
                             .frame(width: 40, height: 40)
-                            .foregroundColor(.F_5_F_5_F_5)
+                            .foregroundColor(Color("F5F5F5"))
                             .cornerRadius(4)
                         Image("filter")
                     }
@@ -235,6 +235,8 @@ struct Home_page: View {
     }
 }
 
-#Preview {
-    Home_page()
+struct Home_page_Previews: PreviewProvider {
+    static var previews: some View {
+        Home_page()
+    }
 }

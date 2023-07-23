@@ -10,7 +10,7 @@ import SwiftUI
 struct Lunch_Screen: View {
     var body: some View {
         ZStack {
-            Color.lunchScreenGray
+            Color("111111")
                 .ignoresSafeArea()
             
             Image("lunchImage")
@@ -20,6 +20,8 @@ struct Lunch_Screen: View {
     }
 }
 
-#Preview {
-    Lunch_Screen()
+struct Lunch_Screen_Previews: PreviewProvider {
+    static var previews: some View {
+        Lunch_Screen()
+    }
 }

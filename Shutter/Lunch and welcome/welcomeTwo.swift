@@ -15,33 +15,35 @@ struct welcomeTwo: View {
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
-                HStack {
-                    Spacer()
-                    Button {
-                        isShowingHome = true
-                    } label: {
-                        Text("Skip")
-                            .font(.system(size: 14))
-                            .foregroundStyle(Color.primary)
-                            .bold()
-                            .padding(.horizontal)
+                VStack(alignment: .leading) {
+                    HStack {
+                        Spacer()
+                        Button {
+                            isShowingHome = true
+                        } label: {
+                            Text("Skip")
+                                .font(.system(size: 14))
+                                .foregroundStyle(Color.primary)
+                                .bold()
+                                .padding(.horizontal)
+                        }
                     }
-                }
-                Spacer()
-                
-                Image("IMG2")
-                    .scaledToFit()
-                Spacer()
-                
-                HStack {
-                    Text("Hire")
-                        .font(.system(size: 24))
-                        .fontWeight(.semibold)
-                        .padding(.horizontal)
                     Spacer()
+                    
+                    Image("IMG2")
+                        .scaledToFit()
+                    Spacer()
+                    
+                    HStack {
+                        Text("Hire")
+                            .font(.system(size: 24))
+                            .fontWeight(.semibold)
+                            .padding(.horizontal)
+                        Spacer()
+                    }
+                    Spacer()
+                    
                 }
-                Spacer()
-                
                 Text("Lorem ipsum dolor sit amet, consectetur adip iscing elitaw. Vivamus nisl augue, blandit sed tempor quis, aliquetquis velas augue. Vivamus sollicitudin eleme ntum rutrum. Cras interdum consectetur blandit tempor nibh.")
                     .padding(.horizontal)
                     .foregroundStyle(Color.gray)
@@ -115,6 +117,8 @@ struct welcomeTwo: View {
     }
 }
 
-#Preview {
-    welcomeTwo()
+struct welcomeTwo_Previews: PreviewProvider {
+    static var previews: some View {
+        welcomeTwo()
+    }
 }
