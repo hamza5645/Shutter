@@ -66,6 +66,16 @@
 			path = "Lunch and welcome";
 			sourceTree = "<group>";
 		};
+		2FEA2AC32A6D3AC700400B92 /* Main Screens */ = {
+			isa = PBXGroup;
+			children = (
+				2F80817D2A64023000484548 /* Home page.swift */,
+				2FB68F042A69517B00C41EDD /* sessions.swift */,
+				2FB68F062A6951B000C41EDD /* profile.swift */,
+			);
+			path = "Main Screens";
+			sourceTree = "<group>";
+		};
 		2FF1E5B12A62CBE90042869F = {
 			isa = PBXGroup;
 			children = (
@@ -88,9 +98,7 @@
 			children = (
 				2FF1E5BD2A62CBE90042869F /* ShutterApp.swift */,
 				2F80817F2A64027100484548 /* Lunch and welcome */,
-				2F80817D2A64023000484548 /* Home page.swift */,
-				2FB68F042A69517B00C41EDD /* sessions.swift */,
-				2FB68F062A6951B000C41EDD /* profile.swift */,
+				2FEA2AC32A6D3AC700400B92 /* Main Screens */,
 				2FF1E5C12A62CBEC0042869F /* Assets.xcassets */,
 				2FF1E5C32A62CBEC0042869F /* Preview Content */,
 			);
