@@ -100,15 +100,20 @@ struct logIn: View {
                 }
                 .frame(width: 343, height: 48)
                 
-                ZStack {
-                    Rectangle()
-                        .frame(width: 343, height: 48)
-                        .cornerRadius(4)
-                        .padding()
-                    
-                    Text("Login")
-                        .foregroundColor(.white)
-                        .font(.custom("Muli-Bold", size: 14))
+                Button {
+                    //Log In
+                } label: {
+                    ZStack {
+                        Rectangle()
+                            .frame(width: 343, height: 48)
+                            .cornerRadius(4)
+                            .padding()
+                            .foregroundColor(.black)
+                        
+                        Text("Login")
+                            .foregroundColor(.white)
+                            .font(.custom("Muli-Bold", size: 14))
+                    }
                 }
             }
             
@@ -121,23 +126,33 @@ struct logIn: View {
                 }
                 .padding()
                 
-                ZStack {
-                    RoundedRectangle(cornerRadius: 4)
-                        .stroke(Color.secondary, lineWidth: 1)
-                        .frame(width: 343, height: 48)
-                    
-                    HStack {
-                        Image("google")
+                Button {
+                    //Log in with Google
+                } label: {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 4)
+                            .stroke(Color.secondary, lineWidth: 1)
+                            .frame(width: 343, height: 48)
                         
-                        Text("Login with Google")
+                        HStack {
+                            Image("google")
+                            
+                            Text("Login with Google")
+                                .foregroundColor(.black)
+                        }
                     }
                 }
                 
                 Spacer()
                 
-                Text("Forget password?")
-                    .font(.custom("Muli-SemiBold", size: 14))
-                    .underline()
+                Button {
+                    //forget password
+                } label: {
+                    Text("Forget password?")
+                        .font(.custom("Muli-SemiBold", size: 14))
+                        .foregroundColor(.black)
+                        .underline()
+                }
                 
                 
                 HStack {
@@ -145,9 +160,14 @@ struct logIn: View {
                         .font(.custom("Muli-SemiBold", size: 14))
                         .foregroundColor(.secondary)
                     
-                    Text("Create one")
-                        .font(.custom("Muli-SemiBold", size: 14))
-                        .underline()
+                    Button {
+                        //sign up
+                    } label: {
+                        Text("Create one")
+                            .font(.custom("Muli-SemiBold", size: 14))
+                            .foregroundColor(.black)
+                            .underline()
+                    }
                 }
                 .padding(10)
             }
