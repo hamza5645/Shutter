@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct logIn: View {
     @State private var email = ""
@@ -103,7 +104,7 @@ struct logIn: View {
                     .frame(width: 343, height: 48)
                     
                     Button {
-                        //Log In
+                        login()
                     } label: {
                         ZStack {
                             Rectangle()
@@ -186,6 +187,14 @@ struct logIn: View {
             )
         }
     }
+    func login() {
+        Auth.auth().signIn(withEmail: email, password: password) { result, error in
+            if error != nil {
+                print(error!.localizedDescription)
+            }
+        }
+    }
+
 }
 
 struct logIn_Previews: PreviewProvider {

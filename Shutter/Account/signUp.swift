@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct signUp: View {
     @State private var name = ""
@@ -91,30 +92,30 @@ struct signUp: View {
                 }
                 
                 VStack {
-                    HStack {
-                        Text("Phone number")
-                            .font(.custom("Muli", size: 14))
-                            .foregroundColor(.secondary)
-                            .padding([.top, .leading, .trailing], 25)
-                        Spacer()
-                    }
+//                    HStack {
+//                        Text("Phone number")
+//                            .font(.custom("Muli", size: 14))
+//                            .foregroundColor(.secondary)
+//                            .padding([.top, .leading, .trailing], 25)
+//                        Spacer()
+//                    }
                     
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 4)
-                            .stroke(Color.secondary, lineWidth: 1)
-                            .frame(width: 343, height: 48)
-                        
-                        HStack {
-                            TextField("+ - - -  - - - -  - - - -", text: $phone)
-                                .keyboardType(.numberPad)
-                                .font(.custom("Muli-SemiBold", size: 16))
-                                .foregroundColor(Color("BBBBBB"))
-                                .padding(.horizontal)
-                            
-                            Spacer()
-                        }
-                    }
-                    .frame(width: 343, height: 48)
+//                    ZStack {
+//                        RoundedRectangle(cornerRadius: 4)
+//                            .stroke(Color.secondary, lineWidth: 1)
+//                            .frame(width: 343, height: 48)
+//
+//                        HStack {
+//                            TextField("+ - - -  - - - -  - - - -", text: $phone)
+//                                .keyboardType(.numberPad)
+//                                .font(.custom("Muli-SemiBold", size: 16))
+//                                .foregroundColor(Color("BBBBBB"))
+//                                .padding(.horizontal)
+//
+//                            Spacer()
+//                        }
+//                    }
+//                    .frame(width: 343, height: 48)
                     
                     HStack {
                         Text("Password")
@@ -157,7 +158,7 @@ struct signUp: View {
                     .frame(width: 343, height: 48)
                     
                     Button {
-                        //Sign up
+                        register()
                     } label: {
                         ZStack {
                             Rectangle()
@@ -231,6 +232,15 @@ struct signUp: View {
             )
         }
     }
+    
+    func register() {
+        Auth.auth().createUser(withEmail: email, password: password) { result, error in
+            if error != nil {
+                print(error!.localizedDescription)
+            }
+        }
+    }
+    
 }
 
 struct signUp_Previews: PreviewProvider {
