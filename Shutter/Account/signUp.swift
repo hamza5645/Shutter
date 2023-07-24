@@ -15,6 +15,7 @@ struct signUp: View {
     @State private var password = ""
     @State private var isPasswordVisible: Bool = false
     @State private var isShowingAnotherView = false
+    @State private var userIsLoggedIn = false
     
     var body: some View {
         NavigationView {
@@ -230,6 +231,13 @@ struct signUp: View {
                     label: { EmptyView() }
                 )
             )
+            .onAppear {
+                Auth.auth().addStateDidChangeListener { auth, user in
+                    if user != nil {
+                        userIsLoggedIn.toggle()
+                    }
+                }
+            }
         }
     }
     

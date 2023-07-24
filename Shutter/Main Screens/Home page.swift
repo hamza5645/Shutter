@@ -195,7 +195,7 @@ struct Home_page: View {
                         }
                         .background(
                             NavigationLink(
-                                destination: logIn()
+                                destination: sessions()
                                     .navigationBarHidden(true),
                                 isActive: $sessionsView,
                                 label: { EmptyView() }
@@ -219,7 +219,7 @@ struct Home_page: View {
                             }
                             .background(
                                 NavigationLink(
-                                    destination: signUp()
+                                    destination: profile()
                                         .navigationBarHidden(true),
                                     isActive: $profileView,
                                     label: { EmptyView() }

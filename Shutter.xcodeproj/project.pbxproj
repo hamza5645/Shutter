@@ -25,6 +25,7 @@
 		2FEA2AD52A6EED5100400B92 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 2FEA2AD42A6EED5100400B92 /* FirebaseAuth */; };
 		2FEA2AD72A6EED5100400B92 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 2FEA2AD62A6EED5100400B92 /* FirebaseFirestore */; };
 		2FEA2AD92A6EEDF000400B92 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2FEA2AD82A6EEDF000400B92 /* GoogleService-Info.plist */; };
+		2FEA2ADB2A6EF3C600400B92 /* sessions(loggedOut).swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEA2ADA2A6EF3C600400B92 /* sessions(loggedOut).swift */; };
 		2FF1E5BE2A62CBE90042869F /* ShutterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF1E5BD2A62CBE90042869F /* ShutterApp.swift */; };
 		2FF1E5C02A62CBE90042869F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF1E5BF2A62CBE90042869F /* ContentView.swift */; };
 		2FF1E5C22A62CBEC0042869F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FF1E5C12A62CBEC0042869F /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 		2FEA2AC62A6D3B0A00400B92 /* logIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logIn.swift; sourceTree = "<group>"; };
 		2FEA2AC92A6D49BF00400B92 /* Muli-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-SemiBold.ttf"; sourceTree = "<group>"; };
 		2FEA2AD82A6EEDF000400B92 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2FEA2ADA2A6EF3C600400B92 /* sessions(loggedOut).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "sessions(loggedOut).swift"; sourceTree = "<group>"; };
 		2FF1E5BA2A62CBE90042869F /* Shutter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shutter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FF1E5BD2A62CBE90042869F /* ShutterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShutterApp.swift; sourceTree = "<group>"; };
 		2FF1E5BF2A62CBE90042869F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			children = (
 				2F80817D2A64023000484548 /* Home page.swift */,
 				2FB68F042A69517B00C41EDD /* sessions.swift */,
+				2FEA2ADA2A6EF3C600400B92 /* sessions(loggedOut).swift */,
 				2FB68F062A6951B000C41EDD /* profile.swift */,
 			);
 			path = "Main Screens";
@@ -233,6 +236,7 @@
 			files = (
 				2FB68F072A6951B000C41EDD /* profile.swift in Sources */,
 				2FB68F052A69517B00C41EDD /* sessions.swift in Sources */,
+				2FEA2ADB2A6EF3C600400B92 /* sessions(loggedOut).swift in Sources */,
 				2FEA2AC52A6D3B0100400B92 /* signUp.swift in Sources */,
 				2FF1E5C02A62CBE90042869F /* ContentView.swift in Sources */,
 				2FF1E5BE2A62CBE90042869F /* ShutterApp.swift in Sources */,
