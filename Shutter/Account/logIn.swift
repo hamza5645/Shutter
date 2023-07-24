@@ -10,22 +10,151 @@ import SwiftUI
 struct logIn: View {
     @State private var email = ""
     @State private var password = ""
+    @State private var isPasswordVisible: Bool = false
     
     var body: some View {
         VStack {
-            HStack {
-                Image(systemName: "multiply")
-                    .frame(width: 16, height: 16)
-                    .padding()
+            VStack {
+                HStack {
+                    Image(systemName: "multiply")
+                        .frame(width: 16, height: 16)
+                        .padding()
+                    
+                    Spacer()
+                    
+                    Text("Login")
+                        .font(.custom("Vollkorn-SemiBold", size: 18))
+                        .padding(.trailing, 163)
+                }
+                
+                Divider()
+                
+                Text("Welcome back")
+                    .font(.custom("Vollkorn-SemiBold", size: 24))
+                
+                Text("Miss you!")
+                    .font(.custom("Muli-SemiBold", size: 16))
+                    .foregroundColor(.secondary)
+                
+                HStack {
+                    Text("Email")
+                        .font(.custom("Muli", size: 14))
+                        .foregroundColor(.secondary)
+                        .padding([.top, .leading, .trailing], 25)
+                    Spacer()
+                }
+                
+                ZStack {
+                    RoundedRectangle(cornerRadius: 4)
+                        .stroke(Color.secondary, lineWidth: 1)
+                        .frame(width: 343, height: 48)
+                    
+                    HStack {
+                        TextField("Enter your email here", text: $email)
+                            .font(.custom("Muli-SemiBold", size: 16))
+                            .foregroundColor(Color("BBBBBB"))
+                            .padding(.horizontal)
+                        
+                        Spacer()
+                    }
+                }
+                .frame(width: 343, height: 48)
+                
+                HStack {
+                    Text("Password")
+                        .font(.custom("Muli", size: 14))
+                        .foregroundColor(.secondary)
+                        .padding([.top, .leading, .trailing], 25)
+                    Spacer()
+                }
+                
+                ZStack {
+                    RoundedRectangle(cornerRadius: 4)
+                        .stroke(Color.secondary, lineWidth: 1)
+                        .frame(width: 343, height: 48)
+                    
+                    HStack {
+                        if isPasswordVisible {
+                            TextField("Enter your password here", text: $password)
+                                .font(.custom("Muli-SemiBold", size: 16))
+                                .foregroundColor(Color("BBBBBB"))
+                                .padding(.horizontal)
+                        } else {
+                            SecureField("Enter your password here", text: $password)
+                                .font(.custom("Muli-SemiBold", size: 16))
+                                .foregroundColor(Color("BBBBBB"))
+                                .padding(.horizontal)
+                        }
+                        
+                        Button {
+                            isPasswordVisible.toggle()
+                        } label: {
+                            Text("Show")
+                                .foregroundColor(.black)
+                                .font(.custom("Muli-Bold", size: 12))
+                                .padding(16)
+                        }
+                        
+                        Spacer()
+                    }
+                }
+                .frame(width: 343, height: 48)
+                
+                ZStack {
+                    Rectangle()
+                        .frame(width: 343, height: 48)
+                        .cornerRadius(4)
+                        .padding()
+                    
+                    Text("Login")
+                        .foregroundColor(.white)
+                        .font(.custom("Muli-Bold", size: 14))
+                }
+            }
+            
+            VStack {
+                ZStack {
+                    Divider()
+                    Text("OR")
+                        .foregroundColor(.secondary)
+                        .font(.custom("Muli-SemiBold", size: 14))
+                }
+                .padding()
+                
+                ZStack {
+                    RoundedRectangle(cornerRadius: 4)
+                        .stroke(Color.secondary, lineWidth: 1)
+                        .frame(width: 343, height: 48)
+                    
+                    HStack {
+                        Image("google")
+                        
+                        Text("Login with Google")
+                    }
+                }
                 
                 Spacer()
                 
-                Text("Login")
-                    .font(.custom("Vollkorn-SemiBold", size: 18))
-                    .padding(.trailing, 163)
+                Text("Forget password?")
+                    .font(.custom("Muli-SemiBold", size: 14))
+                    .underline()
+                
+                
+                HStack {
+                    Text("Don’t have an account?")
+                        .font(.custom("Muli-SemiBold", size: 14))
+                        .foregroundColor(.secondary)
+                    
+                    Text("Create one")
+                        .font(.custom("Muli-SemiBold", size: 14))
+                        .underline()
+                }
+                .padding(10)
             }
+            
             Spacer()
         }
+        
     }
 }
 
