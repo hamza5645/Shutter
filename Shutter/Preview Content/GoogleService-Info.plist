@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1059062525631-ua1eop8pho21isu4hhv48mfst0k76eiu.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1059062525631-ua1eop8pho21isu4hhv48mfst0k76eiu</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCK0w7519U30N6zRkfwmzB1udlqgzkHabk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1059062525631</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.hamxa.shutter</string>
+	<key>PROJECT_ID</key>
+	<string>shutter-7b55b</string>
+	<key>STORAGE_BUCKET</key>
+	<string>shutter-7b55b.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1059062525631:ios:2f765da5cfa3850f81600a</string>
+</dict>
+</plist>
