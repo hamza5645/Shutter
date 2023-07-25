@@ -10,6 +10,8 @@ import SwiftUI
 struct sessions_loggedOut_: View {
     @State private var homeView = false
     @State private var profileView = false
+    @State private var loginView = false
+    @State private var signupView = false
     
     var body: some View {
         NavigationView {
@@ -34,30 +36,55 @@ struct sessions_loggedOut_: View {
                         .foregroundColor(.secondary)
                         .padding()
                     
-                    ZStack {
-                        Rectangle()
-                            .frame(width: 343, height: 48)
-                            .cornerRadius(4)
-                        
-                        HStack {
-                            Text("Create account")
-                                .foregroundColor(.white)
-                                .font(.custom("Muli-Bold", size: 14))
-                        }
-                    }
-                    
-                    ZStack {
-                        Rectangle()
-                            .frame(width: 343, height: 48)
-                            .cornerRadius(4)
-                            .foregroundColor(.secondary)
-                        
-                        HStack {
-                            Text("Login")
+                    Button {
+                        signupView = true
+                    } label: {
+                        ZStack {
+                            Rectangle()
+                                .frame(width: 343, height: 48)
+                                .cornerRadius(4)
                                 .foregroundColor(.black)
-                                .font(.custom("Muli-Bold", size: 14))
+                            
+                            HStack {
+                                Text("Create account")
+                                    .foregroundColor(.white)
+                                    .font(.custom("Muli-Bold", size: 14))
+                            }
                         }
                     }
+                    .background(
+                        NavigationLink (
+                            destination: signUp()
+                                .navigationBarHidden(true),
+                            isActive: $signupView,
+                            label: { EmptyView() }
+                        )
+                    )
+                    
+                    Button {
+                        loginView = true
+                    } label: {
+                        ZStack {
+                            Rectangle()
+                                .frame(width: 343, height: 48)
+                                .cornerRadius(4)
+                                .foregroundColor(.secondary)
+                            
+                            HStack {
+                                Text("Login")
+                                    .foregroundColor(.black)
+                                    .font(.custom("Muli-Bold", size: 14))
+                            }
+                        }
+                    }
+                    .background(
+                        NavigationLink (
+                            destination: logIn()
+                                .navigationBarHidden(true),
+                            isActive: $loginView,
+                            label: { EmptyView() }
+                        )
+                    )
                 }
                 .padding()
                 

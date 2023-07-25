@@ -27,7 +27,7 @@ struct logIn: View {
                         
                         Text("Login")
                             .font(.custom("Vollkorn-SemiBold", size: 18))
-                            .padding(.trailing, 163)
+                            .padding(.trailing, 170)
                     }
                     
                     Divider()
