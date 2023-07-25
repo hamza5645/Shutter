@@ -172,7 +172,7 @@ struct Home_page: View {
                         Spacer()
                         
                         VStack {
-                            Image("home")
+                            Image("homeBlack")
                                 .frame(width: 24, height: 24)
                             
                             Text("Home")
