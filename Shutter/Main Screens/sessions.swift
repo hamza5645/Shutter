@@ -119,7 +119,7 @@ struct sessions: View {
         NavigationView {
             VStack{
                 HStack {
-                    Text("Photographers")
+                    Text("Sessions")
                         .font(.custom("Vollkorn-SemiBold", size: 32))
                         .padding(.horizontal, 30)
                         .fontWeight(.semibold)
