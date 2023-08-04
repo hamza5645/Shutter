@@ -25,7 +25,89 @@ struct profile: View {
     }
     
     var content: some View {
-        Text("Not logged in")
+        NavigationView {
+            VStack {
+                HStack {
+                    Text("Profile")
+                        .font(.custom("Vollkorn-SemiBold", size: 32))
+                        .padding(.horizontal, 30)
+                        .fontWeight(.semibold)
+                    Spacer()
+                }
+                Divider()
+                
+                Spacer()
+                
+                //navBar
+                ZStack {
+                    Rectangle()
+                        .frame(width: 375, height: 50)
+                        .foregroundColor(.white)
+                        .blur(radius: 20)
+                    
+                    HStack {
+                        Spacer()
+                        
+                        Button {
+                            homeView = true
+                        } label: {
+                            VStack {
+                                Image("home")
+                                    .frame(width: 24, height: 24)
+                                
+                                Text("Home")
+                                    .font(.custom("Muli", size: 12))
+                                    .foregroundColor(.black)
+                            }
+                        }
+                        .background(
+                            NavigationLink(
+                                destination: Home_page()
+                                    .navigationBarHidden(true),
+                                isActive: $homeView,
+                                label: { EmptyView() }
+                            )
+                        )
+                        
+                        Spacer()
+                        
+                        Button {
+                            sessionsView = true
+                        } label: {
+                            VStack {
+                                Image("sessions")
+                                    .frame(width: 24, height: 24)
+                                
+                                Text("Sessions")
+                                    .font(.custom("Muli", size: 12))
+                                    .foregroundColor(.black)
+                            }
+                        }
+                        .background(
+                            NavigationLink(
+                                destination: sessions()
+                                    .navigationBarHidden(true),
+                                isActive: $sessionsView,
+                                label: { EmptyView() }
+                            )
+                        )
+                        
+                        Spacer()
+                        
+                        VStack {
+                            Image("profileBlack")
+                                .frame(width: 24, height: 24)
+                            
+                            Text("Profile")
+                                .font(.custom("Muli", size: 12))
+                        }
+                        
+                        Spacer()
+                    }
+                }
+
+            }
+        }
     }
     
     var loggedOut: some View {
