@@ -14,15 +14,29 @@ struct logIn: View {
     @State private var isPasswordVisible: Bool = false
     @State private var isShowingAnotherView = false
     @AppStorage("uid") var userID: String = ""
+    @State private var homeView = false
     
     var body: some View {
         NavigationView {
             VStack {
                 VStack {
                     HStack {
-                        Image(systemName: "multiply")
-                            .frame(width: 16, height: 16)
-                            .padding()
+                        Button {
+                            homeView = true
+                        } label: {
+                            Image(systemName: "multiply")
+                                .frame(width: 16, height: 16)
+                                .padding()
+                                .foregroundColor(.black)
+                        }
+                        .background(
+                            NavigationLink(
+                                destination: Home_page()
+                                    .navigationBarHidden(true),
+                                isActive: $homeView,
+                                label: { EmptyView() }
+                            )
+                        )
                         
                         Spacer()
                         
@@ -204,7 +218,7 @@ struct logIn: View {
             }
         }
     }
-
+    
 }
 
 struct logIn_Previews: PreviewProvider {
