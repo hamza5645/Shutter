@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F3AF1F32A7960BB00A02DB3 /* validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3AF1F22A7960BB00A02DB3 /* validation.swift */; };
 		2F5FC5AD2A6AC67A00942550 /* Muli-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F5FC5AC2A6AC67A00942550 /* Muli-Bold.ttf */; };
 		2F5FC5AF2A6AC68300942550 /* Muli.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F5FC5AE2A6AC68300942550 /* Muli.ttf */; };
 		2F80817A2A63D13300484548 /* welcomeTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8081792A63D13300484548 /* welcomeTwo.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F3AF1F22A7960BB00A02DB3 /* validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = validation.swift; sourceTree = "<group>"; };
 		2F5FC5AC2A6AC67A00942550 /* Muli-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Bold.ttf"; sourceTree = "<group>"; };
 		2F5FC5AE2A6AC68300942550 /* Muli.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Muli.ttf; sourceTree = "<group>"; };
 		2F8081792A63D13300484548 /* welcomeTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcomeTwo.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				2FF1E5BD2A62CBE90042869F /* ShutterApp.swift */,
+				2F3AF1F22A7960BB00A02DB3 /* validation.swift */,
 				2F80817F2A64027100484548 /* Lunch and welcome */,
 				2FEA2AC32A6D3AC700400B92 /* Main Screens */,
 				2FEA2AC82A6D3B0E00400B92 /* Account */,
@@ -233,6 +236,7 @@
 			files = (
 				2FB68F072A6951B000C41EDD /* profile.swift in Sources */,
 				2FB68F052A69517B00C41EDD /* sessions.swift in Sources */,
+				2F3AF1F32A7960BB00A02DB3 /* validation.swift in Sources */,
 				2FEA2AC52A6D3B0100400B92 /* signUp.swift in Sources */,
 				2FF1E5C02A62CBE90042869F /* ContentView.swift in Sources */,
 				2FF1E5BE2A62CBE90042869F /* ShutterApp.swift in Sources */,

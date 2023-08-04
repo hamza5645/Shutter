@@ -13,6 +13,7 @@ struct logIn: View {
     @State private var password = ""
     @State private var isPasswordVisible: Bool = false
     @State private var isShowingAnotherView = false
+    @AppStorage("uid") var userID: String = ""
     
     var body: some View {
         NavigationView {
@@ -188,9 +189,18 @@ struct logIn: View {
         }
     }
     func login() {
-        Auth.auth().signIn(withEmail: email, password: password) { result, error in
-            if error != nil {
-                print(error!.localizedDescription)
+        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+            if let error = error {
+                print(error)
+                return
+            }
+            
+            if let authResult = authResult {
+                print(authResult.user.uid)
+                
+                withAnimation {
+                    userID = authResult.user.uid
+                }
             }
         }
     }

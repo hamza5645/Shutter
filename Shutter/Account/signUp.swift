@@ -16,6 +16,7 @@ struct signUp: View {
     @State private var isPasswordVisible: Bool = false
     @State private var isShowingAnotherView = false
     @State private var userIsLoggedIn = false
+    @AppStorage("uid") var userID: String = ""
     
     var body: some View {
         NavigationView {
@@ -242,9 +243,19 @@ struct signUp: View {
     }
     
     func register() {
-        Auth.auth().createUser(withEmail: email, password: password) { result, error in
-            if error != nil {
-                print(error!.localizedDescription)
+        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+            
+            if let error = error {
+                print(error)
+                return
+            }
+            
+            if let authResult = authResult {
+                print(authResult.user.uid)
+                
+                withAnimation {
+                    userID = authResult.user.uid
+                }
             }
         }
     }

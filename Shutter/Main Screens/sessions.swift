@@ -13,14 +13,15 @@ struct sessions: View {
     @State private var profileView = false
     @State private var loginView = false
     @State private var signupView = false
-    @State private var userIsLoggedIn = false
+//    @State private var userIsLoggedIn = false
+    @AppStorage("uid") var userID: String = ""
     
     var body: some View {
         ZStack {
-            if userIsLoggedIn {
-                content
-            } else {
+            if userID == "" {
                 loggedOut
+            } else {
+                content
             }
         }
     }
@@ -104,13 +105,13 @@ struct sessions: View {
                     }
                 }
             }
-            .onAppear {
-                Auth.auth().addStateDidChangeListener { auth, user in
-                    if user != nil {
-                        userIsLoggedIn.toggle()
-                    }
-                }
-            }
+//            .onAppear {
+//                Auth.auth().addStateDidChangeListener { auth, user in
+//                    if user != nil {
+//                        userIsLoggedIn.toggle()
+//                    }
+//                }
+//            }
         }
     }
     
