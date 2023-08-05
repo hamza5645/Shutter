@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct profile: View {
     @State private var homeView = false
@@ -13,6 +14,9 @@ struct profile: View {
     @State private var loginView = false
     @State private var signupView = false
     @AppStorage("uid") var userID: String = ""
+    @State private var uid: String = ""
+    @State private var email: String = ""
+    @State private var displayName: String = ""
     
     var body: some View {
         ZStack {
@@ -35,6 +39,10 @@ struct profile: View {
                     Spacer()
                 }
                 Divider()
+                
+                Text("User ID: \(uid)")
+                Text("Email: \(email)")
+                Text("Display Name: \(displayName)")
                 
                 Spacer()
                 
@@ -105,9 +113,10 @@ struct profile: View {
                         Spacer()
                     }
                 }
-
+                
             }
         }
+        .onAppear(perform: loadUserData)
     }
     
     var loggedOut: some View {
@@ -120,7 +129,7 @@ struct profile: View {
                         .fontWeight(.semibold)
                     Spacer()
                 }
-                Divider() 
+                Divider()
                 
                 Spacer()
                 
@@ -250,6 +259,15 @@ struct profile: View {
                     }
                 }
             }
+        }
+    }
+    
+    func loadUserData() {
+        let user = Auth.auth().currentUser
+        if let user = user {
+            self.uid = user.uid
+            self.email = user.email ?? "No Email"
+            self.displayName = user.displayName ?? "No Display Name"
         }
     }
 }
