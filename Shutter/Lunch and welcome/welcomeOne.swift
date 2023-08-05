@@ -31,6 +31,7 @@ struct welcomeOne: View {
                     Spacer()
                     
                     Image("IMG1")
+                        .resizable()
                         .scaledToFit()
                     Spacer()
                     

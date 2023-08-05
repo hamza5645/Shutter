@@ -108,30 +108,30 @@ struct signUp: View {
                 }
                 
                 VStack {
-//                    HStack {
-//                        Text("Phone number")
-//                            .font(.custom("Muli", size: 14))
-//                            .foregroundColor(.secondary)
-//                            .padding([.top, .leading, .trailing], 25)
-//                        Spacer()
-//                    }
+                    //                    HStack {
+                    //                        Text("Phone number")
+                    //                            .font(.custom("Muli", size: 14))
+                    //                            .foregroundColor(.secondary)
+                    //                            .padding([.top, .leading, .trailing], 25)
+                    //                        Spacer()
+                    //                    }
                     
-//                    ZStack {
-//                        RoundedRectangle(cornerRadius: 4)
-//                            .stroke(Color.secondary, lineWidth: 1)
-//                            .frame(width: 343, height: 48)
-//
-//                        HStack {
-//                            TextField("+ - - -  - - - -  - - - -", text: $phone)
-//                                .keyboardType(.numberPad)
-//                                .font(.custom("Muli-SemiBold", size: 16))
-//                                .foregroundColor(Color("BBBBBB"))
-//                                .padding(.horizontal)
-//
-//                            Spacer()
-//                        }
-//                    }
-//                    .frame(width: 343, height: 48)
+                    //                    ZStack {
+                    //                        RoundedRectangle(cornerRadius: 4)
+                    //                            .stroke(Color.secondary, lineWidth: 1)
+                    //                            .frame(width: 343, height: 48)
+                    //
+                    //                        HStack {
+                    //                            TextField("+ - - -  - - - -  - - - -", text: $phone)
+                    //                                .keyboardType(.numberPad)
+                    //                                .font(.custom("Muli-SemiBold", size: 16))
+                    //                                .foregroundColor(Color("BBBBBB"))
+                    //                                .padding(.horizontal)
+                    //
+                    //                            Spacer()
+                    //                        }
+                    //                    }
+                    //                    .frame(width: 343, height: 48)
                     
                     HStack {
                         Text("Password")
@@ -266,6 +266,15 @@ struct signUp: View {
             
             if let authResult = authResult {
                 print(authResult.user.uid)
+                
+                let changeRequest = authResult.user.createProfileChangeRequest()
+                changeRequest.displayName = name
+                changeRequest.commitChanges { error in
+                    if let error = error {
+                        print("Failed to update user profile: \(error)")
+                        return
+                    }
+                }
                 
                 withAnimation {
                     userID = authResult.user.uid

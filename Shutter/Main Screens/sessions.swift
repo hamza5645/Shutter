@@ -13,7 +13,6 @@ struct sessions: View {
     @State private var profileView = false
     @State private var loginView = false
     @State private var signupView = false
-//    @State private var userIsLoggedIn = false
     @AppStorage("uid") var userID: String = ""
     
     var body: some View {
@@ -29,6 +28,16 @@ struct sessions: View {
     var content: some View {
         NavigationView {
             VStack {
+                HStack {
+                    Text("Sessions")
+                        .font(.custom("Vollkorn-SemiBold", size: 32))
+                        .padding(.horizontal, 30)
+                        .fontWeight(.semibold)
+                    Spacer()
+                }
+                
+                Divider()
+                
                 Spacer()
                 Text("Empty")
                 
@@ -105,13 +114,6 @@ struct sessions: View {
                     }
                 }
             }
-//            .onAppear {
-//                Auth.auth().addStateDidChangeListener { auth, user in
-//                    if user != nil {
-//                        userIsLoggedIn.toggle()
-//                    }
-//                }
-//            }
         }
     }
     
