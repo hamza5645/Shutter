@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2F3AF1F32A7960BB00A02DB3 /* validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3AF1F22A7960BB00A02DB3 /* validation.swift */; };
+		2F5536F92A7FA4A300609CB9 /* SlidingTabView in Frameworks */ = {isa = PBXBuildFile; productRef = 2F5536F82A7FA4A300609CB9 /* SlidingTabView */; };
 		2F5FC5AD2A6AC67A00942550 /* Muli-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F5FC5AC2A6AC67A00942550 /* Muli-Bold.ttf */; };
 		2F5FC5AF2A6AC68300942550 /* Muli.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F5FC5AE2A6AC68300942550 /* Muli.ttf */; };
 		2F80817A2A63D13300484548 /* welcomeTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8081792A63D13300484548 /* welcomeTwo.swift */; };
@@ -64,6 +65,7 @@
 			files = (
 				2FEA2AD12A6EED5100400B92 /* FirebaseAnalyticsSwift in Frameworks */,
 				2FEA2AD52A6EED5100400B92 /* FirebaseAuth in Frameworks */,
+				2F5536F92A7FA4A300609CB9 /* SlidingTabView in Frameworks */,
 				2FEA2ACD2A6EED5100400B92 /* FirebaseAnalytics in Frameworks */,
 				2FEA2ACF2A6EED5100400B92 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				2FEA2AD32A6EED5100400B92 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
@@ -171,6 +173,7 @@
 				2FEA2AD22A6EED5100400B92 /* FirebaseAnalyticsWithoutAdIdSupport */,
 				2FEA2AD42A6EED5100400B92 /* FirebaseAuth */,
 				2FEA2AD62A6EED5100400B92 /* FirebaseFirestore */,
+				2F5536F82A7FA4A300609CB9 /* SlidingTabView */,
 			);
 			productName = Shutter;
 			productReference = 2FF1E5BA2A62CBE90042869F /* Shutter.app */;
@@ -202,6 +205,7 @@
 			mainGroup = 2FF1E5B12A62CBE90042869F;
 			packageReferences = (
 				2FEA2ACB2A6EED5100400B92 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				2F5536F72A7FA4A300609CB9 /* XCRemoteSwiftPackageReference "SlidingTabView" */,
 			);
 			productRefGroup = 2FF1E5BB2A62CBE90042869F /* Products */;
 			projectDirPath = "";
@@ -457,6 +461,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2F5536F72A7FA4A300609CB9 /* XCRemoteSwiftPackageReference "SlidingTabView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/QuynhNguyen/SlidingTabView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		2FEA2ACB2A6EED5100400B92 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
@@ -468,6 +480,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2F5536F82A7FA4A300609CB9 /* SlidingTabView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F5536F72A7FA4A300609CB9 /* XCRemoteSwiftPackageReference "SlidingTabView" */;
+			productName = SlidingTabView;
+		};
 		2FEA2ACC2A6EED5100400B92 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2FEA2ACB2A6EED5100400B92 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

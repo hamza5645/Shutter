@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Firebase
+import SlidingTabView
 
 struct profile: View {
     @State private var homeView = false
@@ -17,13 +18,14 @@ struct profile: View {
     @State private var uid: String = ""
     @State private var email: String = ""
     @State private var displayName: String = ""
+    @State private var tabIndex = 0
     
     var body: some View {
         ZStack {
             if userID == "" {
-                content
-            } else {
                 loggedOut
+            } else {
+                content
             }
         }
     }
@@ -65,207 +67,206 @@ struct profile: View {
                     Divider()
                 }
                 
-                HStack {
-                    VStack {
-                        Text("Payment history")
-                            .font(.custom("Muli-Bold", size: 16))
-                            .padding(.leading ,39)
-                        
-                        Rectangle()
-                            .frame(width: 171, height: 3)
-                            .foregroundColor(.black)
-                            .padding(.leading, 35)
+                SlidingTabView(selection: $tabIndex, tabs: ["Payment History", "Settings"], activeAccentColor: .black, selectionBarColor: .black)
+                
+                if tabIndex == 0 {
+                    ScrollView {
+                        VStack {
+                            ZStack {
+                                Rectangle()
+                                    .frame(width: 375, height: 88)
+                                    .foregroundColor(.white)
+                                
+                                VStack {
+                                    HStack {
+                                        Text("The system hold fees")
+                                            .font(.custom("Muli", size: 16))
+                                            .foregroundColor(.secondary)
+                                            .padding()
+                                        
+                                        Spacer()
+                                        
+                                        Text("16 Jan, 2020")
+                                            .font(.custom("Muli", size: 12))
+                                            .foregroundColor(.secondary)
+                                            .padding()
+                                    }
+                                    
+                                    Spacer()
+                                    
+                                    HStack {
+                                        HStack {
+                                            Text("150.00")
+                                                .font(.custom("Muli-SemiBold", size: 16))
+                                            
+                                            Text("KWD")
+                                                .font(.custom("Muli", size: 12))
+                                                .foregroundColor(.secondary)
+                                        }
+                                        .padding()
+                                        
+                                        Spacer()
+                                        
+                                        Text("1562")
+                                            .font(.custom("Muli-SemiBold", size: 16))
+                                            .padding()
+                                    }
+                                }
+                            }
+                            .frame(width: 375, height: 88)
+                            .padding([.top, .bottom], 16)
+                            
+                            ZStack {
+                                Rectangle()
+                                    .frame(width: 375, height: 88)
+                                    .foregroundColor(.white)
+                                
+                                VStack {
+                                    HStack {
+                                        Text("The system hold fees")
+                                            .font(.custom("Muli", size: 16))
+                                            .foregroundColor(.secondary)
+                                            .padding()
+                                        
+                                        Spacer()
+                                        
+                                        Text("16 Jan, 2020")
+                                            .font(.custom("Muli", size: 12))
+                                            .foregroundColor(.secondary)
+                                            .padding()
+                                    }
+                                    
+                                    Spacer()
+                                    
+                                    HStack {
+                                        HStack {
+                                            Text("150.00")
+                                                .font(.custom("Muli-SemiBold", size: 16))
+                                            
+                                            Text("KWD")
+                                                .font(.custom("Muli", size: 12))
+                                                .foregroundColor(.secondary)
+                                        }
+                                        .padding()
+                                        
+                                        Spacer()
+                                        
+                                        Text("1562")
+                                            .font(.custom("Muli-SemiBold", size: 16))
+                                            .padding()
+                                    }
+                                }
+                            }
+                            .frame(width: 375, height: 88)
+                            .padding([.top, .bottom], 16)
+                            
+                            ZStack {
+                                Rectangle()
+                                    .frame(width: 375, height: 88)
+                                    .foregroundColor(.white)
+                                
+                                VStack {
+                                    HStack {
+                                        Text("The system hold fees")
+                                            .font(.custom("Muli", size: 16))
+                                            .foregroundColor(.secondary)
+                                            .padding()
+                                        
+                                        Spacer()
+                                        
+                                        Text("16 Jan, 2020")
+                                            .font(.custom("Muli", size: 12))
+                                            .foregroundColor(.secondary)
+                                            .padding()
+                                    }
+                                    
+                                    Spacer()
+                                    
+                                    HStack {
+                                        HStack {
+                                            Text("150.00")
+                                                .font(.custom("Muli-SemiBold", size: 16))
+                                            
+                                            Text("KWD")
+                                                .font(.custom("Muli", size: 12))
+                                                .foregroundColor(.secondary)
+                                        }
+                                        .padding()
+                                        
+                                        Spacer()
+                                        
+                                        Text("1562")
+                                            .font(.custom("Muli-SemiBold", size: 16))
+                                            .padding()
+                                    }
+                                }
+                            }
+                            .frame(width: 375, height: 88)
+                            .padding([.top, .bottom], 16)
+                            
+                            ZStack {
+                                Rectangle()
+                                    .frame(width: 375, height: 88)
+                                    .foregroundColor(.white)
+                                
+                                VStack {
+                                    HStack {
+                                        Text("The system hold fees")
+                                            .font(.custom("Muli", size: 16))
+                                            .foregroundColor(.secondary)
+                                            .padding()
+                                        
+                                        Spacer()
+                                        
+                                        Text("16 Jan, 2020")
+                                            .font(.custom("Muli", size: 12))
+                                            .foregroundColor(.secondary)
+                                            .padding()
+                                    }
+                                    
+                                    Spacer()
+                                    
+                                    HStack {
+                                        HStack {
+                                            Text("150.00")
+                                                .font(.custom("Muli-SemiBold", size: 16))
+                                            
+                                            Text("KWD")
+                                                .font(.custom("Muli", size: 12))
+                                                .foregroundColor(.secondary)
+                                        }
+                                        .padding()
+                                        
+                                        Spacer()
+                                        
+                                        Text("1562")
+                                            .font(.custom("Muli-SemiBold", size: 16))
+                                            .padding()
+                                    }
+                                }
+                            }
+                            .frame(width: 375, height: 88)
+                            .padding([.top, .bottom], 16)
+                        }
                     }
-                    
-                    Spacer()
-                    
-                    Text("Settings")
-                        .font(.custom("Muli-Bold", size: 16))
-                        .foregroundColor(.secondary)
-                        .padding(.trailing ,71)
-                }
-                .padding(.bottom)
-                ScrollView {
-                    VStack {
-                        ZStack {
-                            Rectangle()
-                                .frame(width: 375, height: 88)
-                                .foregroundColor(.white)
-                            
-                            VStack {
-                                HStack {
-                                    Text("The system hold fees")
-                                        .font(.custom("Muli", size: 16))
-                                        .foregroundColor(.secondary)
-                                        .padding()
-                                    
-                                    Spacer()
-                                    
-                                    Text("16 Jan, 2020")
-                                        .font(.custom("Muli", size: 12))
-                                        .foregroundColor(.secondary)
-                                        .padding()
-                                }
-                                
-                                Spacer()
-                                
-                                HStack {
-                                    HStack {
-                                        Text("150.00")
-                                            .font(.custom("Muli-SemiBold", size: 16))
-                                        
-                                        Text("KWD")
-                                            .font(.custom("Muli", size: 12))
-                                            .foregroundColor(.secondary)
-                                    }
-                                    .padding()
-                                    
-                                    Spacer()
-                                    
-                                        Text("1562")
-                                            .font(.custom("Muli-SemiBold", size: 16))
-                                            .padding()
-                                }
-                            }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color("F5F5F5"))
+                } else if tabIndex == 1 {
+                    List {
+                        Section {
+                            Text("Profile information")
+                            Text("Change password")
+                            Text("Notifications settings")
                         }
-                        .frame(width: 375, height: 88)
-                        .padding([.top, .bottom], 16)
                         
-                        ZStack {
-                            Rectangle()
-                                .frame(width: 375, height: 88)
-                                .foregroundColor(.white)
-                            
-                            VStack {
-                                HStack {
-                                    Text("The system hold fees")
-                                        .font(.custom("Muli", size: 16))
-                                        .foregroundColor(.secondary)
-                                        .padding()
-                                    
-                                    Spacer()
-                                    
-                                    Text("16 Jan, 2020")
-                                        .font(.custom("Muli", size: 12))
-                                        .foregroundColor(.secondary)
-                                        .padding()
-                                }
-                                
-                                Spacer()
-                                
-                                HStack {
-                                    HStack {
-                                        Text("150.00")
-                                            .font(.custom("Muli-SemiBold", size: 16))
-                                        
-                                        Text("KWD")
-                                            .font(.custom("Muli", size: 12))
-                                            .foregroundColor(.secondary)
-                                    }
-                                    .padding()
-                                    
-                                    Spacer()
-                                    
-                                        Text("1562")
-                                            .font(.custom("Muli-SemiBold", size: 16))
-                                            .padding()
-                                }
-                            }
+                        Section {
+                            Text("About Shutter")
                         }
-                        .frame(width: 375, height: 88)
-                        .padding([.top, .bottom], 16)
-                        
-                        ZStack {
-                            Rectangle()
-                                .frame(width: 375, height: 88)
-                                .foregroundColor(.white)
-                            
-                            VStack {
-                                HStack {
-                                    Text("The system hold fees")
-                                        .font(.custom("Muli", size: 16))
-                                        .foregroundColor(.secondary)
-                                        .padding()
-                                    
-                                    Spacer()
-                                    
-                                    Text("16 Jan, 2020")
-                                        .font(.custom("Muli", size: 12))
-                                        .foregroundColor(.secondary)
-                                        .padding()
-                                }
-                                
-                                Spacer()
-                                
-                                HStack {
-                                    HStack {
-                                        Text("150.00")
-                                            .font(.custom("Muli-SemiBold", size: 16))
-                                        
-                                        Text("KWD")
-                                            .font(.custom("Muli", size: 12))
-                                            .foregroundColor(.secondary)
-                                    }
-                                    .padding()
-                                    
-                                    Spacer()
-                                    
-                                        Text("1562")
-                                            .font(.custom("Muli-SemiBold", size: 16))
-                                            .padding()
-                                }
-                            }
-                        }
-                        .frame(width: 375, height: 88)
-                        .padding([.top, .bottom], 16)
-                        
-                        ZStack {
-                            Rectangle()
-                                .frame(width: 375, height: 88)
-                                .foregroundColor(.white)
-                            
-                            VStack {
-                                HStack {
-                                    Text("The system hold fees")
-                                        .font(.custom("Muli", size: 16))
-                                        .foregroundColor(.secondary)
-                                        .padding()
-                                    
-                                    Spacer()
-                                    
-                                    Text("16 Jan, 2020")
-                                        .font(.custom("Muli", size: 12))
-                                        .foregroundColor(.secondary)
-                                        .padding()
-                                }
-                                
-                                Spacer()
-                                
-                                HStack {
-                                    HStack {
-                                        Text("150.00")
-                                            .font(.custom("Muli-SemiBold", size: 16))
-                                        
-                                        Text("KWD")
-                                            .font(.custom("Muli", size: 12))
-                                            .foregroundColor(.secondary)
-                                    }
-                                    .padding()
-                                    
-                                    Spacer()
-                                    
-                                        Text("1562")
-                                            .font(.custom("Muli-SemiBold", size: 16))
-                                            .padding()
-                                }
-                            }
-                        }
-                        .frame(width: 375, height: 88)
-                        .padding([.top, .bottom], 16)
                     }
+                    .listStyle(InsetGroupedListStyle())
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color("F5F5F5"))
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color("F5F5F5"))
                 
                 Spacer()
                 
