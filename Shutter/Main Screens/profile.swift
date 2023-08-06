@@ -261,6 +261,20 @@ struct profile: View {
                         
                         Section {
                             Text("About Shutter")
+                            Button {
+                                let firebaseAuth = Auth.auth()
+                                do {
+                                    try firebaseAuth.signOut()
+                                    withAnimation {
+                                        userID = ""
+                                    }
+                                } catch let signOutError as NSError {
+                                    print("Error signing out: %@", signOutError)
+                                }
+                            } label: {
+                                Text("Log Out")
+                                    .foregroundColor(.red)
+                            }
                         }
                     }
                     .listStyle(InsetGroupedListStyle())
