@@ -40,5 +40,25 @@ struct ShutterApp: App {
             Home_page()
                 .environment(\.colorScheme, .light)
         }
+        
+        WindowGroup {
+            sessions()
+                .environment(\.colorScheme, .light)
+        }
+        
+        WindowGroup {
+            profile()
+                .environment(\.colorScheme, .light)
+        }
+        
+        WindowGroup {
+            logIn()
+                .environment(\.colorScheme, .light)
+        }
+        
+        WindowGroup {
+            signUp()
+                .environment(\.colorScheme, .light)
+        }
     }
 }

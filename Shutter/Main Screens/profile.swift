@@ -21,28 +21,251 @@ struct profile: View {
     var body: some View {
         ZStack {
             if userID == "" {
-                loggedOut
-            } else {
                 content
+            } else {
+                loggedOut
             }
         }
     }
     
     var content: some View {
         NavigationView {
-            VStack {
-                HStack {
-                    Text("Profile")
-                        .font(.custom("Vollkorn-SemiBold", size: 32))
-                        .padding(.horizontal, 30)
-                        .fontWeight(.semibold)
+            VStack(alignment: .leading) {
+                VStack(alignment: .leading) {
+                    HStack {
+                        Text("Profile")
+                            .font(.custom("Vollkorn-SemiBold", size: 32))
+                            .padding(.horizontal, 30)
+                            .fontWeight(.semibold)
+                        Spacer()
+                    }
+                    Divider()
+                    
+                    HStack {
+                        Spacer()
+                        Text(displayName)
+                            .font(.custom("Vollkorn-SemiBold", size: 24))
+                        Spacer()
+                    }
+                    
                     Spacer()
+                    Text("Email")
+                        .font(.custom("Muli", size: 14))
+                        .padding(.leading ,16)
+                        .foregroundColor(.secondary)
+                        .padding(.bottom, 8)
+                    
+                    Text(email)
+                        .font(.custom("Muli-SemiBold", size: 14))
+                        .padding(.leading ,16)
+                    
+                    Spacer()
+                    Spacer()
+                    
+                    Divider()
                 }
-                Divider()
                 
-                Text("User ID: \(uid)")
-                Text("Email: \(email)")
-                Text("Display Name: \(displayName)")
+                HStack {
+                    VStack {
+                        Text("Payment history")
+                            .font(.custom("Muli-Bold", size: 16))
+                            .padding(.leading ,39)
+                        
+                        Rectangle()
+                            .frame(width: 171, height: 3)
+                            .foregroundColor(.black)
+                            .padding(.leading, 35)
+                    }
+                    
+                    Spacer()
+                    
+                    Text("Settings")
+                        .font(.custom("Muli-Bold", size: 16))
+                        .foregroundColor(.secondary)
+                        .padding(.trailing ,71)
+                }
+                .padding(.bottom)
+                ScrollView {
+                    VStack {
+                        ZStack {
+                            Rectangle()
+                                .frame(width: 375, height: 88)
+                                .foregroundColor(.white)
+                            
+                            VStack {
+                                HStack {
+                                    Text("The system hold fees")
+                                        .font(.custom("Muli", size: 16))
+                                        .foregroundColor(.secondary)
+                                        .padding()
+                                    
+                                    Spacer()
+                                    
+                                    Text("16 Jan, 2020")
+                                        .font(.custom("Muli", size: 12))
+                                        .foregroundColor(.secondary)
+                                        .padding()
+                                }
+                                
+                                Spacer()
+                                
+                                HStack {
+                                    HStack {
+                                        Text("150.00")
+                                            .font(.custom("Muli-SemiBold", size: 16))
+                                        
+                                        Text("KWD")
+                                            .font(.custom("Muli", size: 12))
+                                            .foregroundColor(.secondary)
+                                    }
+                                    .padding()
+                                    
+                                    Spacer()
+                                    
+                                        Text("1562")
+                                            .font(.custom("Muli-SemiBold", size: 16))
+                                            .padding()
+                                }
+                            }
+                        }
+                        .frame(width: 375, height: 88)
+                        .padding([.top, .bottom], 16)
+                        
+                        ZStack {
+                            Rectangle()
+                                .frame(width: 375, height: 88)
+                                .foregroundColor(.white)
+                            
+                            VStack {
+                                HStack {
+                                    Text("The system hold fees")
+                                        .font(.custom("Muli", size: 16))
+                                        .foregroundColor(.secondary)
+                                        .padding()
+                                    
+                                    Spacer()
+                                    
+                                    Text("16 Jan, 2020")
+                                        .font(.custom("Muli", size: 12))
+                                        .foregroundColor(.secondary)
+                                        .padding()
+                                }
+                                
+                                Spacer()
+                                
+                                HStack {
+                                    HStack {
+                                        Text("150.00")
+                                            .font(.custom("Muli-SemiBold", size: 16))
+                                        
+                                        Text("KWD")
+                                            .font(.custom("Muli", size: 12))
+                                            .foregroundColor(.secondary)
+                                    }
+                                    .padding()
+                                    
+                                    Spacer()
+                                    
+                                        Text("1562")
+                                            .font(.custom("Muli-SemiBold", size: 16))
+                                            .padding()
+                                }
+                            }
+                        }
+                        .frame(width: 375, height: 88)
+                        .padding([.top, .bottom], 16)
+                        
+                        ZStack {
+                            Rectangle()
+                                .frame(width: 375, height: 88)
+                                .foregroundColor(.white)
+                            
+                            VStack {
+                                HStack {
+                                    Text("The system hold fees")
+                                        .font(.custom("Muli", size: 16))
+                                        .foregroundColor(.secondary)
+                                        .padding()
+                                    
+                                    Spacer()
+                                    
+                                    Text("16 Jan, 2020")
+                                        .font(.custom("Muli", size: 12))
+                                        .foregroundColor(.secondary)
+                                        .padding()
+                                }
+                                
+                                Spacer()
+                                
+                                HStack {
+                                    HStack {
+                                        Text("150.00")
+                                            .font(.custom("Muli-SemiBold", size: 16))
+                                        
+                                        Text("KWD")
+                                            .font(.custom("Muli", size: 12))
+                                            .foregroundColor(.secondary)
+                                    }
+                                    .padding()
+                                    
+                                    Spacer()
+                                    
+                                        Text("1562")
+                                            .font(.custom("Muli-SemiBold", size: 16))
+                                            .padding()
+                                }
+                            }
+                        }
+                        .frame(width: 375, height: 88)
+                        .padding([.top, .bottom], 16)
+                        
+                        ZStack {
+                            Rectangle()
+                                .frame(width: 375, height: 88)
+                                .foregroundColor(.white)
+                            
+                            VStack {
+                                HStack {
+                                    Text("The system hold fees")
+                                        .font(.custom("Muli", size: 16))
+                                        .foregroundColor(.secondary)
+                                        .padding()
+                                    
+                                    Spacer()
+                                    
+                                    Text("16 Jan, 2020")
+                                        .font(.custom("Muli", size: 12))
+                                        .foregroundColor(.secondary)
+                                        .padding()
+                                }
+                                
+                                Spacer()
+                                
+                                HStack {
+                                    HStack {
+                                        Text("150.00")
+                                            .font(.custom("Muli-SemiBold", size: 16))
+                                        
+                                        Text("KWD")
+                                            .font(.custom("Muli", size: 12))
+                                            .foregroundColor(.secondary)
+                                    }
+                                    .padding()
+                                    
+                                    Spacer()
+                                    
+                                        Text("1562")
+                                            .font(.custom("Muli-SemiBold", size: 16))
+                                            .padding()
+                                }
+                            }
+                        }
+                        .frame(width: 375, height: 88)
+                        .padding([.top, .bottom], 16)
+                    }
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(Color("F5F5F5"))
                 
                 Spacer()
                 
@@ -277,3 +500,4 @@ struct profile_Previews: PreviewProvider {
         profile()
     }
 }
+
