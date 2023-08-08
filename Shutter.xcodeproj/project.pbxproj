@@ -17,6 +17,7 @@
 		2F8081842A64389500484548 /* Vollkorn-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F8081832A64387C00484548 /* Vollkorn-SemiBold.ttf */; };
 		2FB68F052A69517B00C41EDD /* sessions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB68F042A69517B00C41EDD /* sessions.swift */; };
 		2FB68F072A6951B000C41EDD /* profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB68F062A6951B000C41EDD /* profile.swift */; };
+		2FBAFC7B2A8269CC00E0794D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FF1E5C12A62CBEC0042869F /* Assets.xcassets */; };
 		2FEA2AC52A6D3B0100400B92 /* signUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEA2AC42A6D3B0100400B92 /* signUp.swift */; };
 		2FEA2AC72A6D3B0A00400B92 /* logIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEA2AC62A6D3B0A00400B92 /* logIn.swift */; };
 		2FEA2ACA2A6D49BF00400B92 /* Muli-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FEA2AC92A6D49BF00400B92 /* Muli-SemiBold.ttf */; };
@@ -29,7 +30,6 @@
 		2FEA2AD92A6EEDF000400B92 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2FEA2AD82A6EEDF000400B92 /* GoogleService-Info.plist */; };
 		2FF1E5BE2A62CBE90042869F /* ShutterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF1E5BD2A62CBE90042869F /* ShutterApp.swift */; };
 		2FF1E5C02A62CBE90042869F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF1E5BF2A62CBE90042869F /* ContentView.swift */; };
-		2FF1E5C22A62CBEC0042869F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FF1E5C12A62CBEC0042869F /* Assets.xcassets */; };
 		2FF1E5C52A62CBEC0042869F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FF1E5C42A62CBEC0042869F /* Preview Assets.xcassets */; };
 		2FF1E5D02A62D2E60042869F /* Lunch Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF1E5CF2A62D2E60042869F /* Lunch Screen.swift */; };
 		2FF1E5D22A62DAAF0042869F /* welcomeOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF1E5D12A62DAAF0042869F /* welcomeOne.swift */; };
@@ -225,8 +225,8 @@
 				2F8081842A64389500484548 /* Vollkorn-SemiBold.ttf in Resources */,
 				2F5FC5AF2A6AC68300942550 /* Muli.ttf in Resources */,
 				2FF1E5C52A62CBEC0042869F /* Preview Assets.xcassets in Resources */,
+				2FBAFC7B2A8269CC00E0794D /* Assets.xcassets in Resources */,
 				2F5FC5AD2A6AC67A00942550 /* Muli-Bold.ttf in Resources */,
-				2FF1E5C22A62CBEC0042869F /* Assets.xcassets in Resources */,
 				2FEA2AD92A6EEDF000400B92 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

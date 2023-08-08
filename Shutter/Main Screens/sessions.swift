@@ -18,9 +18,9 @@ struct sessions: View {
     var body: some View {
         ZStack {
             if userID == "" {
-                loggedOut
-            } else {
                 content
+            } else {
+                loggedOut
             }
         }
     }
@@ -28,18 +28,108 @@ struct sessions: View {
     var content: some View {
         NavigationView {
             VStack {
-                HStack {
-                    Text("Sessions")
-                        .font(.custom("Vollkorn-SemiBold", size: 32))
-                        .padding(.horizontal, 30)
-                        .fontWeight(.semibold)
-                    Spacer()
+                VStack {
+                    HStack {
+                        Text("Sessions")
+                            .font(.custom("Vollkorn-SemiBold", size: 32))
+                            .padding(.horizontal, 30)
+                            .fontWeight(.semibold)
+                        Spacer()
+                    }
+                    
+                    Divider()
                 }
-                
-                Divider()
-                
                 Spacer()
-                Text("Empty")
+                
+                ScrollView {
+                    ZStack {
+                        Rectangle()
+                            .frame(width: 375, height: 176)
+                            .foregroundColor(.white)
+                        
+                        VStack {
+                            HStack {
+                                HStack {
+                                    Image("sessions_pic")
+                                        .frame(width: 24, height: 24)
+                                    
+                                    Text("Mohamed Nady")
+                                        .font(.custom("Muli-SemiBold", size: 16))
+                                    
+                                    Spacer()
+                                }
+                                .padding([.leading, .trailing], 16)
+                                
+                                VStack {
+                                    ZStack {
+                                        Rectangle()
+                                            .frame(width: 70, height: 40)
+                                            .foregroundColor(Color("E8F5E2"))
+                                        
+                                        Text("Active")
+                                            .foregroundColor(.green)
+                                            .font(.custom("Muli-Bold", size: 12))
+                                    }
+                                    
+                                    Spacer()
+                                }
+                            }
+                            
+                            HStack {
+                                HStack {
+                                    Image("calender")
+                                        .frame(width: 24, height: 24)
+                                    
+                                    Text("14 / 1 / 2020")
+                                        .font(.custom("Muli", size: 16))
+                                        .foregroundColor(.secondary)
+                                    
+                                    Spacer()
+                                }
+                                
+                                HStack {
+                                    Image("clock")
+                                    
+                                    Text("4 PM - 10 PM")
+                                        .font(.custom("Muli", size: 16))
+                                        .foregroundColor(.secondary)
+                                    
+                                    Spacer()
+                                }
+                            }
+                            .padding([.leading, .trailing], 16)
+                            
+                            HStack {
+                                Image("location")
+                                    .frame(width: 24, height: 24)
+                                
+                                Text("Abdullah As Salem street, Kuwait")
+                                    .font(.custom("Muli", size: 16))
+                                    .foregroundColor(.secondary)
+                                
+                                Spacer()
+                            }
+                            .padding([.leading, .trailing], 16)
+                            
+                            HStack {
+                                Image("money")
+                                    .frame(width: 24, height: 24)
+                                
+                                Text("200 KWD")
+                                    .font(.custom("Muli", size: 16))
+                                    .foregroundColor(.secondary)
+                                
+                                Spacer()
+                            }
+                            .padding([.leading, .trailing], 16)
+                        }
+                    }
+                    .frame(width: 375, height: 176)
+                    .padding(16)
+                    
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(Color("F5F5F5"))
                 
                 Spacer()
                 //Nav Bar
