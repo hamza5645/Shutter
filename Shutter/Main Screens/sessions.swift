@@ -18,9 +18,9 @@ struct sessions: View {
     var body: some View {
         ZStack {
             if userID == "" {
-                content
-            } else {
                 loggedOut
+            } else {
+                content
             }
         }
     }
