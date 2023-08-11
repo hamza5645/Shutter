@@ -154,7 +154,7 @@ struct sessions: View {
                                     ZStack {
                                         Rectangle()
                                             .frame(width: 70, height: 40)
-                                            .foregroundColor(Color("EEEEEE"))
+                                            .foregroundColor(.secondary)
                                         
                                         Text("Active")
                                             .foregroundColor(.black)
