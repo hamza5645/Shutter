@@ -10,12 +10,17 @@ import Firebase
 
 struct ContentView: View {
     @State private var lunchScreen: Bool = false
+    @AppStorage("uid") var userID: String = ""
     var body: some View {
         ZStack {
-            if lunchScreen {
-                welcomeOne()
+            if userID == "" {
+                if lunchScreen {
+                    welcomeOne()
+                } else {
+                    Lunch_Screen()
+                }
             } else {
-                Lunch_Screen()
+                Home_page()
             }
         }
         .onAppear {

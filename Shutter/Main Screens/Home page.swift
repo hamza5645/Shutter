@@ -22,30 +22,30 @@ struct Home_page: View {
                     Spacer()
                 }
                 
-                HStack {
-                    ZStack {
-                        Rectangle()
-                            .frame(width: 287, height: 40)
-                            .cornerRadius(4)
-                            .foregroundColor(Color("F5F5F5"))
-                        
-                        HStack {
-                            Image("search")
-                                .padding(.vertical)
-                            Text("Type name or #hashtag")
-                                .foregroundColor(Color("BBBBBB"))
-                        }
-                    }
-                    
-                    
-                    ZStack {
-                        Rectangle()
-                            .frame(width: 40, height: 40)
-                            .foregroundColor(Color("F5F5F5"))
-                            .cornerRadius(4)
-                        Image("filter")
-                    }
-                }
+//                HStack {
+//                    ZStack {
+//                        Rectangle()
+//                            .frame(width: 287, height: 40)
+//                            .cornerRadius(4)
+//                            .foregroundColor(Color("F5F5F5"))
+//                        
+//                        HStack {
+//                            Image("search")
+//                                .padding(.vertical)
+//                            Text("Type name or #hashtag")
+//                                .foregroundColor(Color("BBBBBB"))
+//                        }
+//                    }
+//                    
+//                    
+//                    ZStack {
+//                        Rectangle()
+//                            .frame(width: 40, height: 40)
+//                            .foregroundColor(Color("F5F5F5"))
+//                            .cornerRadius(4)
+//                        Image("filter")
+//                    }
+//                }
                 
                 Divider()
                 
