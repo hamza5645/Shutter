@@ -74,54 +74,59 @@ struct sessions: View {
                                     Spacer()
                                 }
                             }
+                            .padding(0)
                             
-                            HStack {
+                            VStack {
                                 HStack {
-                                    Image("calender")
+                                    HStack {
+                                        Image("calender")
+                                            .frame(width: 24, height: 24)
+                                        
+                                        Text("14 / 1 / 2020")
+                                            .font(.custom("Muli", size: 16))
+                                            .foregroundColor(.secondary)
+                                        
+                                        Spacer()
+                                    }
+                                    
+                                    HStack {
+                                        Image("clock")
+                                        
+                                        Text("4 PM - 10 PM")
+                                            .font(.custom("Muli", size: 16))
+                                            .foregroundColor(.secondary)
+                                        
+                                        Spacer()
+                                    }
+                                }
+                                .padding([.leading, .trailing], 16)
+                                
+                                HStack {
+                                    Image("location")
                                         .frame(width: 24, height: 24)
                                     
-                                    Text("14 / 1 / 2020")
+                                    Text("Abdullah As Salem street, Kuwait")
                                         .font(.custom("Muli", size: 16))
                                         .foregroundColor(.secondary)
                                     
                                     Spacer()
                                 }
+                                .padding([.leading, .trailing], 16)
                                 
                                 HStack {
-                                    Image("clock")
+                                    Image("money")
+                                        .frame(width: 24, height: 24)
                                     
-                                    Text("4 PM - 10 PM")
+                                    Text("200 KWD")
                                         .font(.custom("Muli", size: 16))
                                         .foregroundColor(.secondary)
                                     
                                     Spacer()
                                 }
-                            }
-                            .padding([.leading, .trailing], 16)
-                            
-                            HStack {
-                                Image("location")
-                                    .frame(width: 24, height: 24)
-                                
-                                Text("Abdullah As Salem street, Kuwait")
-                                    .font(.custom("Muli", size: 16))
-                                    .foregroundColor(.secondary)
+                                .padding([.leading, .trailing], 16)
                                 
                                 Spacer()
                             }
-                            .padding([.leading, .trailing], 16)
-                            
-                            HStack {
-                                Image("money")
-                                    .frame(width: 24, height: 24)
-                                
-                                Text("200 KWD")
-                                    .font(.custom("Muli", size: 16))
-                                    .foregroundColor(.secondary)
-                                
-                                Spacer()
-                            }
-                            .padding([.leading, .trailing], 16)
                         }
                     }
                     .frame(width: 375, height: 176)
