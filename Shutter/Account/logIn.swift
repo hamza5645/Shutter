@@ -31,7 +31,7 @@ struct logIn: View {
                         }
                         .background(
                             NavigationLink(
-                                destination: Home_page()
+                                destination: customTabBar()
                                     .navigationBarHidden(true),
                                 isActive: $homeView,
                                 label: { EmptyView() }

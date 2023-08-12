@@ -105,7 +105,7 @@ struct welcomeTwo: View {
                     )
                     .background(
                         NavigationLink (
-                            destination: Home_page()
+                            destination: customTabBar()
                                 .navigationBarHidden(true),
                             isActive: $isShowingHome,
                             label: { EmptyView() }

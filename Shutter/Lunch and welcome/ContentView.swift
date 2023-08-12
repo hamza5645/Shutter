@@ -20,7 +20,7 @@ struct ContentView: View {
                     Lunch_Screen()
                 }
             } else {
-                Home_page()
+                customTabBar()
             }
         }
         .onAppear {
