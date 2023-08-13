@@ -303,7 +303,7 @@ struct profile: View {
                 Spacer()
                 
                 VStack {
-                    Text("You have to create account login first")
+                    Text("You have to create account / login first")
                         .font(.custom("Muli", size: 16))
                         .foregroundColor(.secondary)
                         .padding()
