@@ -15,6 +15,7 @@ struct logIn: View {
     @State private var isShowingAnotherView = false
     @AppStorage("uid") var userID: String = ""
     @State private var homeView = false
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         NavigationView {
@@ -22,21 +23,13 @@ struct logIn: View {
                 VStack {
                     HStack {
                         Button {
-                            homeView = true
+                            presentationMode.wrappedValue.dismiss()
                         } label: {
                             Image(systemName: "multiply")
                                 .frame(width: 16, height: 16)
                                 .padding()
                                 .foregroundColor(.black)
                         }
-                        .background(
-                            NavigationLink(
-                                destination: customTabBar()
-                                    .navigationBarHidden(true),
-                                isActive: $homeView,
-                                label: { EmptyView() }
-                            )
-                        )
                         
                         Spacer()
                         

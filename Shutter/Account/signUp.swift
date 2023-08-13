@@ -18,6 +18,7 @@ struct signUp: View {
     @State private var userIsLoggedIn = false
     @AppStorage("uid") var userID: String = ""
     @State private var homeView = false
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         NavigationView {
@@ -25,21 +26,13 @@ struct signUp: View {
                 VStack {
                     HStack {
                         Button {
-                            homeView = true
+                            presentationMode.wrappedValue.dismiss()
                         } label: {
                             Image(systemName: "multiply")
                                 .frame(width: 16, height: 16)
                                 .padding()
                                 .foregroundColor(.black)
                         }
-                        .background(
-                            NavigationLink(
-                                destination: customTabBar()
-                                    .navigationBarHidden(true),
-                                isActive: $homeView,
-                                label: { EmptyView() }
-                            )
-                        )
                         
                         Spacer()
                         
@@ -100,6 +93,7 @@ struct signUp: View {
                                 .font(.custom("Muli-SemiBold", size: 16))
                                 .foregroundColor(Color("BBBBBB"))
                                 .padding(.horizontal)
+                                .autocapitalization(.none)
                             
                             Spacer()
                         }
@@ -108,31 +102,6 @@ struct signUp: View {
                 }
                 
                 VStack {
-                    //                    HStack {
-                    //                        Text("Phone number")
-                    //                            .font(.custom("Muli", size: 14))
-                    //                            .foregroundColor(.secondary)
-                    //                            .padding([.top, .leading, .trailing], 25)
-                    //                        Spacer()
-                    //                    }
-                    
-                    //                    ZStack {
-                    //                        RoundedRectangle(cornerRadius: 4)
-                    //                            .stroke(Color.secondary, lineWidth: 1)
-                    //                            .frame(width: 343, height: 48)
-                    //
-                    //                        HStack {
-                    //                            TextField("+ - - -  - - - -  - - - -", text: $phone)
-                    //                                .keyboardType(.numberPad)
-                    //                                .font(.custom("Muli-SemiBold", size: 16))
-                    //                                .foregroundColor(Color("BBBBBB"))
-                    //                                .padding(.horizontal)
-                    //
-                    //                            Spacer()
-                    //                        }
-                    //                    }
-                    //                    .frame(width: 343, height: 48)
-                    
                     HStack {
                         Text("Password")
                             .font(.custom("Muli", size: 14))
