@@ -65,6 +65,7 @@ struct logIn: View {
                                 .font(.custom("Muli-SemiBold", size: 16))
                                 .foregroundColor(Color("BBBBBB"))
                                 .padding(.horizontal)
+                                .autocapitalization(.none)
                             
                             Spacer()
                         }
