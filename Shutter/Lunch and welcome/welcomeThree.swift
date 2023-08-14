@@ -15,105 +15,81 @@ struct welcomeThree: View {
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
+
+                Image("IMG3")
+                    .resizable()
+                    .scaledToFit()
+                    .padding(.top, 30)
                 
-                VStack(alignment: .leading) {
-                    HStack {
-                        Spacer()
-                        Button {
-                            isShowingHome = true
-                        } label: {
-                            Text("Skip")
-                                .font(.system(size: 14))
-                                .foregroundStyle(Color.primary)
-                                .bold()
-                                .padding(.horizontal)
-                        }
-                    }
+                HStack {
+                    Text("Pay")
+                        .font(.system(size: 24))
+                        .fontWeight(.semibold)
+                        .padding(.horizontal)
+                        .padding(.top, 30)
                     Spacer()
-                    
-                    Image("IMG3")
-                        .resizable()
-                        .scaledToFit()
-                    Spacer()
-                    
-                    HStack {
-                        Text("Pay")
-                            .font(.system(size: 24))
-                            .fontWeight(.semibold)
-                            .padding(.horizontal)
-                        Spacer()
-                    }
-                    Spacer()
-                    
                 }
+                Spacer()
+                
                 Text("Lorem ipsum dolor sit amet, consectetur adip iscing elitaw. Vivamus nisl augue, blandit sed tempor quis, aliquetquis velas augue. Vivamus sollicitudin eleme ntum rutrum. Cras interdum consectetur blandit tempor nibh.")
                     .padding(.horizontal)
                     .foregroundStyle(Color.gray)
                     .font(.system(size: 16))
+                    .padding(.top, 16)
                 
                 Spacer()
-                Spacer()
-                Spacer()
-                Spacer()
                 
-                HStack {
+                VStack(alignment: .leading) {
                     Spacer()
-                    
-                    Circle()
-                        .frame(width: 10, height: 10)
-                        .padding(.vertical)
-                        .foregroundStyle(Color.secondary)
-                    
-                    Circle()
-                        .frame(width: 10, height: 10)
-                        .padding(.vertical)
-                        .foregroundStyle(Color.secondary)
-                    
-                    Circle()
-                        .frame(width: 10, height: 10)
-                        .padding(.vertical)
-                        .foregroundStyle(Color.primary)
-                    
-                    Spacer()
-                }
-                Spacer()
-                
-                Button {
-                    isShowingAnotherView = true
-                } label: {
                     HStack {
                         Spacer()
-                        ZStack {
-                            Rectangle()
-                                .frame(width: 343, height: 48)
-                                .cornerRadius(4)
-                                .padding()
-                                .foregroundStyle(Color.primary)
-                            
-                            Text("Next")
-                                .font(.system(size: 14))
-                                .foregroundStyle(colorScheme == .light ? Color.white : Color.black)
-                        }
+                        
+                        Circle()
+                            .frame(width: 10, height: 10)
+                            .padding(.vertical)
+                            .foregroundStyle(Color.secondary)
+                        
+                        Circle()
+                            .frame(width: 10, height: 10)
+                            .padding(.vertical)
+                            .foregroundStyle(Color.secondary)
+                        
+                        Circle()
+                            .frame(width: 10, height: 10)
+                            .padding(.vertical)
+                            .foregroundStyle(Color.primary)
+                        
                         Spacer()
                     }
+                    
+                    Button {
+                        isShowingAnotherView = true
+                    } label: {
+                        HStack {
+                            Spacer()
+                            ZStack {
+                                Rectangle()
+                                    .frame(width: 343, height: 48)
+                                    .cornerRadius(4)
+                                    .padding()
+                                    .foregroundStyle(Color.primary)
+                                
+                                Text("Next")
+                                    .font(.system(size: 14))
+                                    .foregroundStyle(.white)
+                            }
+                            Spacer()
+                        }
+                    }
+                    .background(
+                        NavigationLink (
+                            destination: customTabBar()
+                                .navigationBarHidden(true),
+                            isActive: $isShowingAnotherView,
+                            label: { EmptyView() }
+                        )
+                    )
                 }
-                .background(
-                    NavigationLink (
-                        destination: customTabBar()
-                            .navigationBarHidden(true),
-                        isActive: $isShowingAnotherView,
-                        label: { EmptyView() }
-                    )
-                )
-                .background(
-                    NavigationLink (
-                        destination: customTabBar()
-                            .navigationBarHidden(true),
-                        isActive: $isShowingHome,
-                        label: { EmptyView() }
-                    )
-                )
-                
             }
         }
     }
