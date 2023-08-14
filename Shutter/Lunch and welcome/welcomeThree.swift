@@ -15,7 +15,7 @@ struct welcomeThree: View {
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
-
+                Spacer()
                 Image("IMG3")
                     .resizable()
                     .scaledToFit()
