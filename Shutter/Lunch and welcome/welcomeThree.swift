@@ -74,7 +74,7 @@ struct welcomeThree: View {
                                     .padding()
                                     .foregroundStyle(Color.primary)
                                 
-                                Text("Next")
+                                Text("Let’s start")
                                     .font(.system(size: 14))
                                     .foregroundStyle(.white)
                             }
