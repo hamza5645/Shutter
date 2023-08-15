@@ -46,6 +46,9 @@ struct customTabBar: View {
             .tag(3)
         }
         .accentColor(.black)
+        .onAppear() {
+            UITabBar.appearance().backgroundColor = .white
+        }
     }
 }
 
