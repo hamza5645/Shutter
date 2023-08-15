@@ -13,17 +13,17 @@ struct SearchBar: View {
     
     var body: some View {
         HStack {
-            TextField("Search ...", text: $text)
-                .padding(7)
-                .padding(.horizontal, 25)
+            TextField("Type name or #hashtag", text: $text)
+                .padding(10)
+                .padding(.horizontal, 56)
                 .background(Color(.systemGray6))
-                .cornerRadius(8)
+                .cornerRadius(4)
+                .frame(width: 343, height: 16)
                 .overlay(
                     HStack {
-                        Image("magnifyingglass")
-                            .foregroundColor(.gray)
+                        Image("search")
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                            .padding(.leading, 8)
+                            .padding(.leading, 16)
                         
                         if isEditing {
                             Button(action: {
@@ -50,8 +50,7 @@ struct SearchBar: View {
                     Text("Cancel")
                 }
                 .padding(.trailing, 10)
-                .transition(.move(edge: .trailing))
-                .animation(.default)
+                .animation(.easeInOut)
             }
         }
     }
@@ -69,13 +68,14 @@ struct Home_page: View {
                     Text("Photographers")
                         .font(.custom("Vollkorn-SemiBold", size: 32))
                         .padding(.horizontal, 30)
-                        .fontWeight(.semibold)
                     Spacer()
                 }
                 
                 SearchBar(text: $searchText)
+                    .padding(.bottom, 16)
                 
                 Divider()
+                    .padding(.bottom, 16)
                 
                 ScrollView {
                     VStack {
