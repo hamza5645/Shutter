@@ -12,47 +12,46 @@ struct SearchBar: View {
     @State private var isEditing = false
     
     var body: some View {
-        HStack {
-            TextField("Type name or #hashtag", text: $text)
-                .padding(10)
-                .padding(.horizontal, 56)
-                .background(Color(.systemGray6))
-                .cornerRadius(4)
-                .frame(width: 343, height: 16)
-                .overlay(
-                    HStack {
-                        Image("search")
-                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                            .padding(.leading, 16)
-                        
-                        if isEditing {
-                            Button(action: {
-                                self.text = ""
-                            }) {
-                                Image(systemName: "multiply.circle.fill")
-                                    .foregroundColor(.gray)
-                                    .padding(.trailing, 8)
+            HStack {
+                TextField("Type name or #hashtag", text: $text)
+                    .padding(10)
+                    .padding(.horizontal, 56)
+                    .background(Color(.systemGray6))
+                    .cornerRadius(4)
+                    .overlay(
+                        HStack {
+                            Image("search")
+                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                                .padding(.leading, 16)
+                            
+                            if isEditing {
+                                Button(action: {
+                                    self.text = ""
+                                }) {
+                                    Image(systemName: "multiply.circle.fill")
+                                        .foregroundColor(.gray)
+                                        .padding(.trailing, 8)
+                                }
                             }
                         }
+                    )
+                    .padding(.horizontal, 10)
+                    .onTapGesture {
+                        self.isEditing = true
                     }
-                )
-                .padding(.horizontal, 10)
-                .onTapGesture {
-                    self.isEditing = true
+                
+                if isEditing {
+                    Button(action: {
+                        self.isEditing = false
+                        self.text = ""
+                        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                    }) {
+                        Text("Cancel")
+                    }
+                    .padding(.trailing, 10)
+                    .animation(.easeInOut)
                 }
-            
-            if isEditing {
-                Button(action: {
-                    self.isEditing = false
-                    self.text = ""
-                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-                }) {
-                    Text("Cancel")
-                }
-                .padding(.trailing, 10)
-                .animation(.easeInOut)
             }
-        }
     }
 }
 
